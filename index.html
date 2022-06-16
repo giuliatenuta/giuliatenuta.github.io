@@ -1,70 +1,119 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Politica italiana</title>
 
- <head>
- 	<title> Pancakes nutella e fragole </title>
-	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-	<link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/product/">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
- </head>
+    <style>
+      body {
+        font-weight: 600;
 
- <body>
-		<div class="container">
- 	<h1 > PANCAKES CON NUTELLA E FRAGOLE </h1>
-	<h2 id="subtitle" > Senza glutine, facili e veloci da preparare, 
-		perfetti per colazione ma anche per merenda! </h2>
-		<br>
-	<img src= "https://blog.giallozafferano.it/zeroglutine/wp-content/uploads/2019/04/IMG_1175.jpg" alt="pancakes con nutella e fragole" id="img"/>
-	<div id="img-over">
-		
-	</div>
-	<br>
-	<ul id="text-image">
-		<li>Difficoltà: <strong> Molto facile </strong></li>
-		<li>Preparazione: <strong> 15 minuti </strong></li>
-		<li>Cottura: <strong> 20 minuti </strong></li>
-		<li>Dosi: <strong> 4 persone </strong></li>
-		<h3 id="subtitle"> INGREDIENTI: </h3>
-		<li>Burro <strong> 25g </strong></li>
-		<li>Uova <strong> 2 </strong></li>
-		<li>Lievito in polvere per dolci <strong> 6g </strong></li>
-		<li>Farina 00 <strong> 125g </strong></li>
-		<li>Latte intero <strong> 200g </strong></li>
-		<li>Zucchero <strong> 15g </strong></li>
-		<li>Nutella <strong> 100g </strong></li>
-		<li>Fragole <strong> 100g </strong></li>
+      }
+      
 
-	</ul>
-	<br>
-	<h3>PREPARAZIONE</h3>
-	<ol type="1"> 
-			<li>Fondere il burro a fuoco basso e lasciare intiepidire</li>
-			<li>Dividere gli albumi dai tuorli e versare i tuorli in una ciotola e sbatteterli con una frusta a mano</li>
-			<li>Unire il burro e il latte continuando a mescolare con la frusta</li>
-			<li>Unire il lievito alla farina e setacciare tutto nella ciotola con il composto di uova; mescolare con la frusta per amalgamare </li>
-			<li>Montare gli albumi versando poco alla volta lo zucchero e quando saranno bianchi e spumosi incorporarli al composto di uova</li>
-			<li>Mettere a scaldare su fuoco medio una padella ampia e ungere con un po' di burro</li>
-			<li>Versare al centro un mestolino di preparato</li>
-			<li>Quando compariranno delle bollicine in superficie, girare il pancake sull'altro latoper mezzo di una spatolina</li>
-			<li>Proseguire con il resto dell'impasto e spalmare su ogni pancake la nutella e aggiungere le fette di fragole</li>
-	</ol> 
-	
-    <footer>
-        <p>Tenuta Giulia<br>4° G</p>
-    </footer>
-	</div>
- </body>
- 
- <script>
- 	"use strict";
-	const bottone = document.getElementById("img")
-	bottone.onclick = () => {
-		const link = document.createElement("a")
-		link.href = "https://www.youtube.com/watch?v=BjwRjkENm6A"
-		link.textContent = "Guarda Video"
-		document.getElementById("img-over").appendChild(link)
-	}
-</script>
- 
+     
+      .clickable {
+        cursor: pointer;
+      }
+      #partiti {
+        background: white
+      }
+     #propaganda {
+       background: rgba(251,116,124,255);
+     }
+     .centered_partiti {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
+    .centered_centri{
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    </style>
+
+    <link href="assets/css/index.css" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <header class="site-header sticky-top py-1">
+      <nav class="container d-flex flex-column flex-md-row justify-content-between fs-5 ">
+        <a class="py-2" href="./index.html">
+         Home
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="./propaganda.html">Propaganda politica</a>
+        <a class="py-2 d-none d-md-inline-block" href="./partiti.html">Partiti italiani</a>
+        <a class="py-2 d-none d-md-inline-block" href="./centri.html">Centro destra e sinistra</a>
+      </nav>
+    </header>
+
+    <main>
+      
+      <div onclick = "goTo('/propaganda.html')" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center clickable" id = "propaganda">
+        
+        <img src = "assets/images/propaganda-1.jpg" alt = "propaganda" class = " w-100" >
+      
+      </div>
+
+      <div  onclick = "goTo('/partiti.html')" class="position-relative overflow-hidden p-0 p-md-0 m-md-3 text-center clickable " id = "partiti">
+            
+          <div class="centered_partiti">
+            <h2 class="display-3 fw-bold"></h2>
+          </div>
+          <img src = "assets/images/partiti-1.jpeg" alt = "partiti" class = " w-50" >
+          </div>
+        </div>
+        
+      </div>
+
+      
+
+      <div  onclick = "goTo('/centri.html')" class="position-relative overflow-hidden p-0 p-md-0 m-md-3 text-center  clickable" id = "centri">
+          <div class = "centered_centri">
+          
+          </div>
+          <img src = "assets/images/centri-2.jpeg" alt = "centro detra e sinistra"  class = "w-100" >
+      </div>
+    </main>
+
+    <footer class="py-5 bg-light mt-0">
+      <div class = "container">
+        <div class="row">
+          <div class="col-6 col-md">
+            <img  src="assets/images/scuola.png" alt="logo-scuola" width="90" height="90">
+      
+          </div>
+          <div class="col-6 col-md">
+            <h5>Contatti</h5>
+            <p class = "text-secondary mb-0"> Liceo Ariosto Spallanzani</p>
+            <p class = "text-secondary"> Laura Saccani, Giulia Tenuta</p>
+          </div>
+      
+          <div class="col-6 col-md d-flex flex-column">
+            <h5>Sitemap</h5>
+            <a href = "./index.html" class=" text-black-50 text-decoration-none block"> Home</a>
+            <a href = "./propaganda.html" class=" text-black-50 text-decoration-none block"> Propaganda politica</a>
+            <a href = "./partiti.html" class=" text-black-50 text-decoration-none block"> Partiti italiani</a>
+            <a href = "./centri.html" class=" text-black-50 text-decoration-none block"> Centro destra e sinistra</a>
+          </div>
+        </div>
+      </div>
+      
+      </footer>
+  </body>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const goTo = (url) => {
+        window.location.href = url
+      }
+    </script>
 </html>
-
