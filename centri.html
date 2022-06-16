@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Centro destra e sinitra</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/product/">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+     
+     h3 {
+        font-size: 1.75rem;
+      }
+     
+      h1{
+        font-weight: 600;
+        font-size: 5rem;
+        margin-top: 20%;
+        color: white;
+      }
+      
+      h2{
+        font-weight: 600;
+        font-size: 3rem;
+      }
+
+      ul{
+        list-style: none;
+      }
+     
+      li{
+        margin-right: 6px;
+      }
+      
+     
+      .btn {
+        text-decoration: none;
+        font-size: 7rem;
+        font-weight: 600;
+        position: relative;
+        bottom:50px;
+        cursor: pointer;
+        
+      }
+
+      .card{
+        height: 75vh
+      }
+     
+      .hidden{
+        display: none;
+      }
+      .show{
+        display: block;
+      }
+      
+    </style>
+    <link href="assets/css/index.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header class="site-header sticky-top py-1">
+      <nav class="container d-flex flex-column flex-md-row justify-content-between fs-5 ">
+        <a class="py-2" href="./index.html">
+          Home
+         </a>
+        <a class="py-2 d-none d-md-inline-block" href="./propaganda.html">Propaganda politica</a>
+        <a class="py-2 d-none d-md-inline-block" href="./partiti.html">Partiti italiani</a>
+        <a class="py-2 d-none d-md-inline-block" href="./centri.html">Centro destra e sinistra</a>
+      </nav>
+    </header>
+
+      <main class = "my-4">
+
+        <div class="d-flex flex-equal w-100 my-md-3 ps-md-3">
+          <div style = "background: #ff4d4d"class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center  text-white card ">
+            <div class="my-3 p-3">
+              <h1 class>Centro sinistra</h1>
+              <span class ="btn  text-white " onclick="show('sinistra')">
+                <i class="bi bi-chevron-compact-down"></i>
+              </span>
+            </div>
+          </div>
+          <div style = "background-color: #4d94ff;" class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white card">
+            <div class="my-3 py-3">
+              <h1 >Centro destra</h1>
+              <span class ="btn text-white "  onclick= "show('destra')">
+                <i class="bi bi-chevron-compact-down"></i>
+              </span>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div id = "destra" class="content hidden">
+          <div class = "  my-4 d-flex flex-column flex-equal">
+            <div class = "mx-5">
+              <h2 class = "my-3 border-bottom">
+                ANALOGIE
+              </h2>
+              <ul class = "d-flex  flex-equal">
+                <li>
+                  <h3>
+                    Oppositori
+                  </h3>
+                  Entrambi continuano a contrapporsi  alla sinistra estrema
+                </li>
+                <li>
+                  <h3>
+                    Partititi
+                  </h3>
+                  Entrambi composti da parititi liberarli, cattolico-democratici
+                </li>
+              </ul>
+            </div>
+      
+          <div class = "mx-5">
+            <h2 class = "my-3 border-bottom">
+              DIFFERENZE
+            </h2>
+              <ul class = "d-flex  flex-equal">
+                <li>
+                  <h3>
+                    Sinistra
+                  </h3>
+                  Il centro destra di De Gasperi condivideva i valori antifascisti propri 
+                  del CLN con la sinistra. Il centro destra attuale, invece, non condivide nessun valore con i suoi oppositori
+                </li>
+                <li>
+                  <h3>
+                   Leader
+                  </h3>
+                    Nel centro destra degli anni 50, i leader dei partiti avevano il compito di guidare le azioni del partito e lo stesso popolo.
+                    Nel centro destra attuale è il popolo che guida le scelte del partito: i leader sono espressione delle richeste del popolo
+                </li>
+              </ul>
+          </div>
+          </div>
+        </div>
+
+        <div id = "sinistra" class="content hidden">
+          <div class = "  my-4 d-flex flex-column flex-equal">
+            <div class = "mx-5">
+              <h2 class = "my-3 border-bottom">
+                ANALOGIE
+              </h2>
+              <ul class = "d-flex  flex-equal">
+                <li>
+                  <h3>
+                    Valori:
+                  </h3>
+                  Sostiene il miglioramento della giustizia sociale e promuove un grado di uguaglianza sociale che ritiene sia raggiungibile promuovendo le pari opportunità.
+                </li>
+              </ul>
+            </div>
+      
+          <div class = "mx-5">
+            <h2 class = "my-3 border-bottom">
+              DIFFERENZE
+            </h2>
+              <ul class = "d-flex  flex-equal">
+                <li>
+                  <h3>
+                   Opposizione
+                  </h3>
+                  Il centro sinistra degli anni 60 nasce in opposizione alla sinistra 
+                  estremista dei comunisti, mentre il centro sinistra di oggi nasce in opposizione al centro destra
+                </li>
+              </ul>
+          </div>
+          </div>
+        </div>
+
+      </main>
+
+
+      <footer class="bg-light py-5">
+        <div class = "container">
+          <div class="row">
+            <div class="col-6 col-md">
+              <img  src="assets/images/scuola.png" alt="logo-scuola" width="90" height="90">      
+        
+            </div>
+            <div class="col-6 col-md">
+              <h5>Contatti</h5>
+              <p class = "text-secondary mb-0"> Liceo Ariosto Spallanzani</p>
+              <p class = "text-secondary"> Laura Saccani, Giulia Tenuta</p>
+            </div>
+        
+            <div class="col-6 col-md d-flex flex-column">
+              <h5>Sitemap</h5>
+              <a href = "./index.html" class=" text-black-50 text-decoration-none block"> Home</a>
+              <a href = "./propaganda.html" class=" text-black-50 text-decoration-none block"> Propaganda politica</a>
+              <a href = "./partiti.html" class=" text-black-50 text-decoration-none block"> Partiti italiani</a>
+              <a href = "./centri.html" class=" text-black-50 text-decoration-none block"> Centro destra e sinistra</a>
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+  </body>
+
+  <script>
+    const show = (id) => {
+      
+      document.getElementById(id).classList.toggle("hidden")
+      if(id === "destra") document.getElementById("sinistra").classList.add("hidden")
+      else document.getElementById("destra").classList.add("hidden")
+      
+      
+    }
+  </script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+ 
+</html>
